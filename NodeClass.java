@@ -1,4 +1,4 @@
-public class NodeClass {
+public class NodeClass<node1> {
     private Object node; //Private Instance Data for node
     private Object pointer1; //First Pointer
     private Object pointer2; //Second Pointer
@@ -39,5 +39,34 @@ public class NodeClass {
         return pointer2;
     }
 
+    @Override
+    public String toString() {
+        return "Node: " + getNode() + ", " + getPointer1() + ", " + getPointer2()
+    }
+    /*
+    @Override
+    public boolean equals(Object obj, Object obj2) {
+        if(obj instanceof NodeClass && obj2 instanceof NodeClass){
+            return ((NodeClass) obj).getNode() == ((NodeClass) obj2).getNode() &&
+                    ((NodeClass) obj).getPointer1() == ((NodeClass) obj2).getPointer2() &&
+                    ((NodeClass) obj).getPointer2() == ((NodeClass) obj2).getPointer2();
+        }
+        else return false;
+    }
+    */
 
+    /*
+    @Override
+    public boolean equals(Object obj1, Object obj2) {
+        if(obj1 instanceof NodeClass && obj2 instanceof NodeClass) {
+            return obj1.equals(obj2);
+        }
+        else return false;
+    }
+    */
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }
