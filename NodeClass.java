@@ -27,5 +27,17 @@ public class NodeClass {
         pointer2 = updatedPointer2;
     }
 
+    public Object getNode() { //access node
+        return node;
+    }
+
+    public Object getPointer1() { //access first pointer
+        return pointer1;
+    }
+
+    public Object getPointer2() { //access second pointer
+        return pointer2;
+    }
+
 
 }
