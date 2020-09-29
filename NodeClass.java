@@ -41,10 +41,10 @@ public class NodeClass<node1> {
 
     @Override
     public String toString() {
-        return "Node: " + getNode() + ", " + getPointer1() + ", " + getPointer2()
+        return "Node: " + getNode() + ", " + getPointer1() + ", " + getPointer2();
     }
-    /*
-    @Override
+
+
     public boolean equals(Object obj, Object obj2) {
         if(obj instanceof NodeClass && obj2 instanceof NodeClass){
             return ((NodeClass) obj).getNode() == ((NodeClass) obj2).getNode() &&
@@ -53,20 +53,28 @@ public class NodeClass<node1> {
         }
         else return false;
     }
-    */
 
-    /*
-    @Override
-    public boolean equals(Object obj1, Object obj2) {
-        if(obj1 instanceof NodeClass && obj2 instanceof NodeClass) {
-            return obj1.equals(obj2);
-        }
-        else return false;
-    }
-    */
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+
+
+
+}
+
+class testNode{
+    public static void main(String[] args) {
+        int intA = 5;
+        Object node1 = new NodeClass(intA);
+        int intB = 10;
+        String StringA = "Hello";
+        String StringB = "World";
+        Object node2 = new NodeClass(intB,StringA,StringB);
+        System.out.println(((NodeClass) node1).toString());
+        System.out.println(((NodeClass) node2).toString());
+        ((NodeClass) node1).setNode(10);
+        ((NodeClass) node1).setPointer1("Hello");
+        ((NodeClass) node1).setPointer2("World");
+        System.out.println(((NodeClass) node1).toString());
+        System.out.println(((NodeClass) node2).toString());
+        System.out.println(node1.equals(node2));
     }
 }
