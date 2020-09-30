@@ -54,9 +54,7 @@ public class Node <T> {
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof Node){
-            return this.node == ((Node) obj).getNode() &&
-                    this.pointer1 == ((Node) obj).getPointer1() &&
-                    this.pointer2 == ((Node) obj).getPointer2();
+            return this.node == ((Node) obj).getNode();
         }
         else return false;
     }
@@ -78,7 +76,7 @@ class TestNode{
         System.out.println(((Node) node1).toString());
         System.out.println(((Node) node2).toString());
         ((Node) node1).setNode(10);
-        ((Node) node1).setPointer1("Hello");
+        ((Node) node1).setPointer1("Goodbye");
         ((Node) node1).setPointer2("World");
         System.out.println(((Node) node1).toString());
         System.out.println(((Node) node2).toString());
