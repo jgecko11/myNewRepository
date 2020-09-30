@@ -67,7 +67,7 @@ public class Node <T> {
 
 }
 
-class testNode{
+class TestNode{
     public static void main(String[] args) {
         int intA = 5;
         Object node1 = new Node(intA);
