@@ -51,12 +51,10 @@ public class Node <T> {
         return "Node: " + getNode() + ", " + getPointer1() + ", " + getPointer2();
     } //updated toString
 
-    @Override
-    public boolean equals(Object obj) {
-        if(obj instanceof Node){
-            return this.node == ((Node) obj).getNode();
-        }
-        else return false;
+    //@Override
+    public boolean equals(Node n) {
+            return this.node.equals(n.getNode());
+
     }
 
 
