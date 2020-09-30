@@ -26,8 +26,8 @@ public class Node <T> {
         this.node = updatedData;
     } //Updates data
 
-    public void setPointer1(T updtaedPointer1){ //set first pointer
-        pointer1 = updtaedPointer1;
+    public void setPointer1(T updatedPointer1){ //set first pointer
+        pointer1 = updatedPointer1;
     } //Updates first pointer
 
     public void setPointer2(T updatedPointer2){ //set second pointer
@@ -51,12 +51,12 @@ public class Node <T> {
         return "Node: " + getNode() + ", " + getPointer1() + ", " + getPointer2();
     } //updated toString
 
-
-    public boolean equals(T obj, T obj2) {
-        if(obj instanceof Node && obj2 instanceof Node){
-            return ((Node) obj).getNode() == ((Node) obj2).getNode() &&
-                    ((Node) obj).getPointer1() == ((Node) obj2).getPointer2() &&
-                    ((Node) obj).getPointer2() == ((Node) obj2).getPointer2();
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof Node){
+            return this.node == ((Node) obj).getNode() &&
+                    this.pointer1 == ((Node) obj).getPointer1() &&
+                    this.pointer2 == ((Node) obj).getPointer2();
         }
         else return false;
     }
@@ -82,6 +82,6 @@ class TestNode{
         ((Node) node1).setPointer2("World");
         System.out.println(((Node) node1).toString());
         System.out.println(((Node) node2).toString());
-        System.out.println(node1.equals(node2));
+        System.out.println(((Node) node1).equals(node2));
     }
 }
